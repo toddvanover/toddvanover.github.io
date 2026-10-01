@@ -6,18 +6,20 @@
   <title>Todd Vanover | AI Software Engineering Portfolio</title>
   <style>
     :root {
-      --bg: #0a0a0a;
-      --card: rgba(255, 255, 255, 0.90);
-      --border: #2a2a2a;
+      --bg: #000000;
+      --card: rgba(18, 18, 18, 0.85);
+      --border: #e50914;
       --text: #ffffff;
-      --accent: #e50914;
+      --accent: #ff2a2a;
     }
     body {
       font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
       background-color: var(--bg);
-      background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url('lion.jpg');
+      background-image: 
+        radial-gradient(circle at center, rgba(0, 0, 0, 0.2) 0%, rgba(0, 0, 0, 0.85) 100%),
+        url('lion.jpg');
       background-size: cover;
-      background-position: center center;
+      background-position: center top;
       background-attachment: fixed;
       background-repeat: no-repeat;
       color: var(--text);
@@ -33,43 +35,59 @@
       z-index: 1;
     }
     header {
-      background: rgba(10, 10, 10, 0.82);
-      border: 1px solid rgba(229, 9, 20, 0.4);
-      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.8), 0 0 20px rgba(229, 9, 20, 0.2);
-      backdrop-filter: blur(8px);
-      -webkit-backdrop-filter: blur(8px);
-      border-radius: 12px;
-      padding: 32px 24px;
-      margin-bottom: 45px;
+      margin-bottom: 50px;
+      padding: 20px 10px;
     }
     header img {
       margin: 0 auto 16px;
       border: 3px solid var(--accent);
-      box-shadow: 0 4px 15px rgba(229, 9, 20, 0.4);
+      box-shadow: 0 0 25px rgba(229, 9, 20, 0.7), 0 4px 15px rgba(0, 0, 0, 0.9);
     }
     h1, h2, h3 {
       color: var(--accent);
       margin-top: 0;
     }
     header h1 {
-      font-size: 2.2rem;
-      letter-spacing: 0.5px;
+      font-size: 2.6rem;
+      letter-spacing: 1px;
       margin-bottom: 8px;
-      text-shadow: 0 2px 10px rgba(229, 9, 20, 0.3);
+      text-shadow: 0 2px 15px rgba(0, 0, 0, 1), 0 0 25px rgba(229, 9, 20, 0.6);
     }
-    a {
-      color: var(--accent);
-      text-decoration: none;
-      font-weight: 600;
-    }
-    a:hover {
-      text-decoration: underline;
+    header p {
+      text-shadow: 0 2px 10px rgba(0, 0, 0, 1), 0 0 4px rgba(0, 0, 0, 0.9);
+      font-weight: 500;
     }
     .subtitle {
       color: #ffffff;
-      font-size: 1.15rem;
-      font-weight: 500;
+      font-size: 1.2rem;
+      font-weight: 600;
       margin: 0 0 16px;
+      display: inline-block;
+      background: rgba(0, 0, 0, 0.6);
+      padding: 4px 16px;
+      border-radius: 20px;
+      border: 1px solid rgba(255, 255, 255, 0.15);
+    }
+    a {
+      color: #ffffff;
+      background: var(--accent);
+      padding: 8px 18px;
+      border-radius: 25px;
+      text-decoration: none;
+      font-weight: 600;
+      display: inline-block;
+      box-shadow: 0 4px 15px rgba(229, 9, 20, 0.5);
+      transition: transform 0.2s, box-shadow 0.2s;
+    }
+    a:hover {
+      transform: scale(1.05);
+      box-shadow: 0 6px 20px rgba(229, 9, 20, 0.8);
+      text-decoration: none;
+    }
+    section h2 {
+      font-size: 1.8rem;
+      margin-bottom: 24px;
+      text-shadow: 0 2px 12px rgba(0, 0, 0, 1);
     }
     .grid {
       display: grid;
@@ -77,23 +95,26 @@
     }
     .card {
       background: var(--card);
-      border: 1px solid var(--border);
-      padding: 20px;
-      border-radius: 6px;
-      color: var(--accent);
-      backdrop-filter: blur(4px);
+      border: 1px solid rgba(229, 9, 20, 0.4);
+      padding: 24px;
+      border-radius: 10px;
+      color: var(--text);
+      backdrop-filter: blur(8px);
+      box-shadow: 0 8px 25px rgba(0, 0, 0, 0.7);
     }
     .card h3 {
       margin-top: 0;
       color: var(--accent);
     }
     .card p {
-      color: var(--accent);
+      color: #eaeaea;
     }
     .tags {
-      margin-top: 12px;
+      margin-top: 14px;
       font-size: 0.85rem;
       color: var(--accent);
+      font-weight: 600;
+      letter-spacing: 0.5px;
     }
   </style>
 </head>
